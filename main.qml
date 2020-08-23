@@ -31,31 +31,231 @@ Window {
     }
 
 
-    FileIO {
-        id: myFile
-        //          source: "my_file.txt"
-        onError: console.log(msg)
-    }
+    Column{
 
-    Button {
-        onClicked: fDialog.open()
+        anchors.centerIn: parent
+        width: parent.width
+        Text {
 
-    }
-
-    Text {
-        id: displayTest
-        text: qsTr("text")
-    }
-
-    FileDialog {
-        id: fDialog
-        onAccepted: {
-//            displayTest.text = this.fileUrl
-            myFile.source = this.fileUrl
-            console.log( "WRITE"+ myFile.write("TEST"));
-                    displayTest.text =  myFile.read();
+            text: qsTr("Start MAc ID:")
         }
+
+        Row {
+            width: parent.width
+
+
+
+
+            TextField{
+                id:onePos
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+    //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:twoPos
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+    //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:threePos
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+                //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:fourPos
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+                //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:fivePos
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+                //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:sixPos
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+
+        }
+
+        Rectangle {
+            color: "transparent"
+            height: 50
+            width: parent.width
+        }
+
+        Text {
+
+
+            text: qsTr("End Mac Id:")
+        }
+        Row {
+            width: parent.width
+
+
+
+
+            TextField{
+                id:oneEnd
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+    //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:twoEnd
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+    //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:threeEnd
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+                //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:fourEnd
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+                //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:fiveEnd
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+            Text {
+                //            id:
+                text: qsTr(":")
+            }
+            TextField{
+                id:sixEnd
+                width: parent.width/7
+                placeholderText: '00'
+
+            }
+
+        }
+
+        Rectangle {
+            color: "transparent"
+            height: 50
+            width: parent.width
+        }
+
+        Button {
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: "Start Generation"
+        }
+
     }
+
+
+
+//Component.onCompleted: testing()
+
+    function testing(){
+        var yourNumber = 4
+        var hexString = yourNumber.toString(16);
+
+        console.log(hexString)
+
+        for(var i= 0; i<=255; i++){
+            for(var j=0;j<=255; j++){
+                for(var k =0;k<=255;k++){
+                    for(var l=0;l<=255;l++){
+                        for(var m=0;m<=255;m++){
+                            for(var n=0;n<=255;n++){
+                                console.log(i.toString(16)+":"+j.toString(16)+":"+":"+k.toString(16)+":"+l.toString(16)+":"+m.toString(16)+":"+n.toString(16))
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+//    FileIO {
+//        id: myFile
+//        //          source: "my_file.txt"
+//        onError: console.log(msg)
+//    }
+
+//    Button {
+//        onClicked: fDialog.open()
+
+//    }
+
+//    Text {
+//        id: displayTest
+//        text: qsTr("text")
+//    }
+
+//    FileDialog {
+//        id: fDialog
+//        onAccepted: {
+////            displayTest.text = this.fileUrl
+//            myFile.source = this.fileUrl
+//            console.log( "WRITE"+ myFile.write("TEST"));
+//                    displayTest.text =  myFile.read();
+//        }
+//    }
 
 
 
